@@ -1,10 +1,14 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
-import Page from "./components/Page";
+import { BrowserRouter as Router } from "react-router-dom";
+import Main from "./components/Main";
 import "./App.css";
 
 function App() {
-  return <Page Carousel={Carousel} />;
+  return (
+    <Router>
+      <Main />
+    </Router>
+  );
 }
 
 export default App;
