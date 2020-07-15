@@ -111,3 +111,7 @@ body {
 .carousel-caption {
   text-align: right;
 }
+
+.gallery-container {
+  padding-top: 2em;
+}
