@@ -138,22 +138,12 @@ const Home = () => {
             </p>
           </div>
           <div className="col-md-5">
-            <svg
+            <img
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">
-                500x500
-              </text>
-            </svg>
+              src="/assets/images/part1.jpg"
+              style={{ width: 500, height: 500 }}
+              alt="Third slide"
+            />
           </div>
         </div>
 
@@ -173,22 +163,12 @@ const Home = () => {
             </p>
           </div>
           <div className="col-md-5 order-md-1">
-            <svg
+            <img
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">
-                500x500
-              </text>
-            </svg>
+              src="/assets/images/part2.jpg"
+              style={{ width: 500, height: 500 }}
+              alt="Third slide"
+            />
           </div>
         </div>
 
@@ -208,22 +188,12 @@ const Home = () => {
             </p>
           </div>
           <div className="col-md-5">
-            <svg
+            <img
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">
-                500x500
-              </text>
-            </svg>
+              src="/assets/images/part3.jpg"
+              style={{ width: 500, height: 500 }}
+              alt="Third slide"
+            />
           </div>
         </div>
 
