@@ -6,9 +6,9 @@ import Gallery from "./Gallery";
 import Pricing from "./Pricing";
 import UserDetail from "./UserDetail";
 
-const Main = props => {
+const Main = () => {
   let location = useLocation();
-  console.log(location);
+  //   console.log(location);
 
   return (
     <React.Fragment>
@@ -17,11 +17,7 @@ const Main = props => {
         <Route path="/home" component={Home} />
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/pricing" component={Pricing} />
-        <Route
-          exact
-          path="/user/:id"
-          component={() => <UserDetail user={props.user} />}
-        />
+        <Route exact path="/user/:id" component={UserDetail} />
         <Redirect to="/home" />
       </Switch>
     </React.Fragment>

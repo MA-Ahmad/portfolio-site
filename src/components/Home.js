@@ -110,7 +110,10 @@ const Home = () => {
                 <p>{user.description}</p>
                 <p>
                   <Link
-                    to={`/user/${user.id}`}
+                    to={{
+                      pathname: `/user/${user.id}`,
+                      query: { name: user.name, description: user.description }
+                    }}
                     className="btn btn-secondary"
                     href="#"
                     role="button"
