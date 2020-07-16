@@ -20,9 +20,6 @@ const Header = () => {
           <NavLink to="/pricing" className="nav-link">
             <span className="fa fa-money fa-lg"></span>Pricing
           </NavLink>
-          <Nav.Link className="nav-link" href="#aboutus">
-            <span className="fa fa-info fa-lg"></span> About Us
-          </Nav.Link>
           <Nav.Link className="nav-link" href="#contactus">
             <span className="fa fa-address-card fa-lg"></span> Contact Us
           </Nav.Link>
