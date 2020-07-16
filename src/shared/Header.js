@@ -17,9 +17,9 @@ const Header = () => {
           <Nav.Link href="#features" className="nav-link">
             Features
           </Nav.Link>
-          <Nav.Link href="#pricing" className="nav-link">
-            Pricing
-          </Nav.Link>
+          <NavLink to="/pricing" className="nav-link">
+            <span className="fa fa-money fa-lg"></span>Pricing
+          </NavLink>
           <Nav.Link className="nav-link" href="#aboutus">
             <span className="fa fa-info fa-lg"></span> About Us
           </Nav.Link>
