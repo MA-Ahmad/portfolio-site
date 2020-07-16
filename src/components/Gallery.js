@@ -15,6 +15,17 @@ const Gallery = () => {
           <Image src="/assets/images/slider/image3.jpg" thumbnail />
         </Col>
       </Row>
+      <Row className="row2">
+        <Col xs={6} md={4}>
+          <Image src="/assets/images/slider/image3.jpg" thumbnail />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src="/assets/images/slider/image3.jpg" thumbnail />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src="/assets/images/slider/image3.jpg" thumbnail />
+        </Col>
+      </Row>
     </Container>
   );
 };
