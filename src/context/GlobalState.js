@@ -43,7 +43,7 @@ const GlobalState = props => {
   return (
     <UserContext.Provider
       value={{
-        users: users,
+        users: userState.users,
         addUser: addUser
       }}
     >

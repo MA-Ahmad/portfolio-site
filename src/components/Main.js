@@ -7,7 +7,7 @@ import Pricing from "./Pricing";
 import UserDetail from "./UserDetail";
 
 const Main = () => {
-  let location = useLocation();
+  //   let location = useLocation();
   //   console.log(location);
 
   return (

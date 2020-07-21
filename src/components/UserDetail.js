@@ -19,15 +19,9 @@ const UserDetail = ({ match }) => {
 
   const handleSubmit = values => {
     setShow(false);
-    const user = { id: selectedUser.id, ...values };
+    const user = { id: selectedUser.id, image: "", ...values };
     console.log(user);
     context.addUser(user);
-    // this.props.postComment(
-    //   this.props.dishId,
-    //   values.rating,
-    //   values.author,
-    //   values.comment
-    // );
   };
 
   return (
