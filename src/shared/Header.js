@@ -14,9 +14,6 @@ const Header = () => {
           <NavLink to="/gallery" className="nav-link">
             <span className="fa fa-picture-o fa-lg"></span>Gallery
           </NavLink>
-          <Nav.Link href="#features" className="nav-link">
-            Features
-          </Nav.Link>
           <NavLink to="/pricing" className="nav-link">
             <span className="fa fa-money fa-lg"></span>Pricing
           </NavLink>
