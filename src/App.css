@@ -120,3 +120,7 @@ body {
 .gallery-row{
   margin-top: 2em;
 }
+
+.form-label {
+  padding: 0 1rem;
+}
