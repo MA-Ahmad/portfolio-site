@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, Button } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
-import Users from "./Users";
+import HomeUsers from "./HomeUsers";
 
 const Home = () => {
   return (
@@ -55,7 +55,7 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
       <div className="container marketing">
-        <Users />
+        <HomeUsers />
 
         <hr className="featurette-divider" />
         <div className="row featurette">

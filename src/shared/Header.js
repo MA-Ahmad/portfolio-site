@@ -14,6 +14,9 @@ const Header = () => {
           <NavLink to="/gallery" className="nav-link">
             <span className="fa fa-picture-o fa-lg"></span>Gallery
           </NavLink>
+          <NavLink to="/users" className="nav-link">
+            <span className="fa fa-user fa-lg"></span>Users
+          </NavLink>
           <NavLink to="/pricing" className="nav-link">
             <span className="fa fa-money fa-lg"></span>Pricing
           </NavLink>

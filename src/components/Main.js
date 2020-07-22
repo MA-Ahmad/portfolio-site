@@ -5,6 +5,7 @@ import Home from "./Home";
 import Gallery from "./Gallery";
 import Pricing from "./Pricing";
 import UserDetail from "./UserDetail";
+import Users from "./Users";
 
 const Main = () => {
   //   let location = useLocation();
@@ -17,7 +18,8 @@ const Main = () => {
         <Route path="/home" component={Home} />
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/pricing" component={Pricing} />
-        <Route exact path="/user/:id" component={UserDetail} />
+        <Route exact path="/users/:id" component={UserDetail} />
+        <Route exact path="/users" component={Users} />
         <Redirect to="/home" />
       </Switch>
     </React.Fragment>

@@ -30,14 +30,31 @@ const GlobalState = props => {
         semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
         condimentum nibh, ut fermentum massa justo sit amet risus.`,
       image: ""
+    },
+    {
+      id: 4,
+      name: "Taimoor",
+      description: `Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
+        egestas eget quam. Vestibulum id ligula porta felis euismod
+        semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+        condimentum nibh, ut fermentum massa justo sit amet risus.`,
+      image: ""
     }
   ];
   const [userState, dispatch] = useReducer(userReducer, { users: users });
+  const [editUser, setEditUser] = useState(null);
 
   const addUser = user => {
     setTimeout(() => {
       dispatch({ type: ADD_USER, user: user });
     }, 700);
+  };
+
+  // Find task
+  const findUser = id => {
+    const user = users.find(user => user.id === id);
+
+    setEditUser(user);
   };
 
   return (

@@ -5,6 +5,9 @@ import { Control, LocalForm, Errors } from "react-redux-form";
 
 const UserDetail = ({ match }) => {
   const [show, setShow] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userDescription, setUserDescription] = useState("");
+
   const context = useContext(UserContext);
   const selectedUser = context.users.filter(
     user => user.id === parseInt(match.params.id, 10)
@@ -24,6 +27,41 @@ const UserDetail = ({ match }) => {
     context.addUser(user);
   };
 
+  const handleNameChange = e => {
+    setUserName(e.target.value);
+  };
+
+  const handleDescriptionChange = e => {
+    setUserDescription(e.target.value);
+  };
+
+  useEffect(() => {
+    // if (userName === "") {
+    //   setUserName(selectedUser.name);
+    // } else {
+    //   setUserName("");
+    // }
+    setUserName(selectedUser.name);
+    // required(selectedUser.name);
+
+    console.log("Useeffect");
+  }, []);
+
+  useEffect(() => {
+    if (userDescription === "") {
+      setUserDescription(selectedUser.description);
+    } else {
+      setUserDescription("");
+    }
+    console.log("Useeffect");
+  }, []);
+
+  //   const findUser = id => {
+  //     const user = users.find(user => user.id === id);
+
+  //     // setEditUser(user);
+  //   };
+
   return (
     <Container className="gallery-container">
       <Row className="gallery-row">
@@ -35,10 +73,10 @@ const UserDetail = ({ match }) => {
             style={{ width: "100%", height: "12rem" }}
           />
           <Card.Body>
-            <Card.Title>{selectedUser.name}</Card.Title>
+            <Card.Title>{userName}</Card.Title>
             <Card.Text>{selectedUser.description}</Card.Text>
             <Button variant="primary" onClick={handleShow}>
-              <span className="fa fa-pencil fa-lg"></span>Show
+              <span className="fa fa-pencil fa-lg"></span> Edit
             </Button>
           </Card.Body>
         </Card>
@@ -50,7 +88,7 @@ const UserDetail = ({ match }) => {
           show={show}
           onHide={handleClose}
           backdrop="static"
-          keyboard={false}
+          keyboard={true}
         >
           <LocalForm onSubmit={values => handleSubmit(values)}>
             <Modal.Header closeButton>Submit Comment</Modal.Header>
@@ -76,14 +114,16 @@ const UserDetail = ({ match }) => {
                 </Col>
               </Row>
               <Row className="form-group">
-                <label className="form-label" htmlFor="name" md={4}>
+                <label className="form-label" htmlFor="username" md={4}>
                   Your Name
                 </label>
                 <Col md={12}>
                   <Control.text
-                    model=".name"
-                    id="name"
-                    name="name"
+                    model=".username"
+                    id="username"
+                    name="username"
+                    value={userName}
+                    onChange={handleNameChange}
                     placeholder="Your Name"
                     className="form-control"
                     validators={{
@@ -94,7 +134,7 @@ const UserDetail = ({ match }) => {
                   />
                   <Errors
                     className="text-danger"
-                    model=".name"
+                    model=".username"
                     show="touched"
                     messages={{
                       required: "Required",
@@ -115,6 +155,8 @@ const UserDetail = ({ match }) => {
                     type="textarea"
                     id="description"
                     name="description"
+                    value={userDescription}
+                    onChange={handleDescriptionChange}
                     rows="6"
                   />
                 </Col>
