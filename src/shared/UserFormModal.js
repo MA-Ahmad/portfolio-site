@@ -17,9 +17,14 @@ const UserFormModal = props => {
 
   const handleSubmit = values => {
     props.setShow(false);
-    const user = { id: props.selectedUser.id, image: "", ...values };
+    let user = {};
+    if (props.selectedUser) {
+      user = { id: props.selectedUser.id, image: "", ...values };
+      props.setUser({ ...user, name: user.name });
+    } else {
+      user = { image: "", ...values };
+    }
     console.log("uu", user);
-    props.setUser({ ...user, name: user.name });
     context.addUser(user);
   };
 
@@ -32,16 +37,13 @@ const UserFormModal = props => {
   };
 
   useEffect(() => {
-    // if (userName === "") {
-    //   setUserName(selectedUser.name);
-    // } else {
-    //   setUserName("");
-    // }
-    setUserName(props.selectedUser.name);
+    if (props.selectedUser) {
+      setUserName(props.selectedUser.name);
+    }
   }, []);
 
   useEffect(() => {
-    if (userDescription === "") {
+    if (props.selectedUser) {
       setUserDescription(props.selectedUser.description);
     } else {
       setUserDescription("");

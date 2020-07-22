@@ -8,7 +8,7 @@ const addUser = (user, state) => {
   );
 
   if (updatedUserIndex < 0) {
-    // updatedUsers.push({ ...user, quantity: 1 });
+    updatedUsers.push({ ...user, id: updatedUsers.length + 1 });
   } else {
     const updatedUser = {
       ...updatedUsers[updatedUserIndex]

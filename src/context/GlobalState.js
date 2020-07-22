@@ -50,13 +50,6 @@ const GlobalState = props => {
     }, 700);
   };
 
-  // Find task
-  const findUser = id => {
-    const user = users.find(user => user.id === id);
-
-    setEditUser(user);
-  };
-
   return (
     <UserContext.Provider
       value={{

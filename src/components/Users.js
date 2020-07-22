@@ -1,18 +1,25 @@
 import React, { useState, useContext, useEffect } from "react";
 import UserContext from "../context/user-context";
 import { Link } from "react-router-dom";
+import UserFormModal from "../shared/UserFormModal";
 import { Container, Card, Button, Row, Col, Modal } from "react-bootstrap";
 
 const Users = () => {
+  const [show, setShow] = useState(false);
   const context = useContext(UserContext);
+
   let userChunks = [];
   let usersList = [];
   console.log(context.users);
 
+  const handleShow = () => setShow(true);
+
   return (
     <React.Fragment>
       <div role="main">
-        <Button variant="primary ml-2 mt-2">Add User</Button>{" "}
+        <Button variant="primary ml-2 mt-2" onClick={handleShow}>
+          Add User
+        </Button>{" "}
         <div className="container marketing p-4">
           {context.users.map(user => {
             if (userChunks.length < 3) {
@@ -97,6 +104,7 @@ const Users = () => {
           </div>
         </div>
       </div>
+      <UserFormModal show={show} setShow={setShow} />
     </React.Fragment>
   );
 };

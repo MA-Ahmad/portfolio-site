@@ -1,8 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import UserFormModal from "../shared/UserFormModal";
 import UserContext from "../context/user-context";
-import { Container, Card, Button, Row, Col, Modal } from "react-bootstrap";
-import { Control, LocalForm, Errors } from "react-redux-form";
+import { Container, Card, Button, Row, Col } from "react-bootstrap";
 
 const UserDetail = ({ match }) => {
   const [show, setShow] = useState(false);
